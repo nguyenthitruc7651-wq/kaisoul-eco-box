@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>KAISOUL ECO BOX — Create. Observe. Survive.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app-container">
+        <!-- Top UI Header -->
+        <header id="top-bar">
+            <div class="brand">
+                <span class="brand-title">KAISOUL ECO BOX</span>
+                <span class="brand-sub">Sandbox Simulation</span>
+            </div>
+            <div class="stats-group">
+                <div class="stat-item">FPS: <span id="val-fps">60</span></div>
+                <div class="stat-item">Hạt: <span id="val-particles">0</span></div>
+                <div class="stat-item">Trạng thái: <span id="val-status">PLAY</span></div>
+            </div>
+        </header>
+
+        <!-- Main Canvas Viewport -->
+        <main id="viewport-wrapper">
+            <div id="sim-controls">
+                <button class="ctrl-btn" id="btn-pause" title="Tạm dừng / Tiếp tục">PAUSE</button>
+                <button class="ctrl-btn" id="btn-reset" title="Đặt lại Sandbox">RESET</button>
+            </div>
+            <canvas id="game-canvas"></canvas>
+        </main>
+
+        <!-- Toolbar Menu -->
+        <footer id="toolbar">
+            <button class="tool-btn active" data-material="1">
+                <span class="tool-icon icon-soil"></span>
+                <span>Đất</span>
+            </button>
+            <button class="tool-btn" data-material="2">
+                <span class="tool-icon icon-water"></span>
+                <span>Nước</span>
+            </button>
+            <button class="tool-btn" data-material="3">
+                <span class="tool-icon icon-stone"></span>
+                <span>Đá</span>
+            </button>
+            <button class="tool-btn" data-material="4">
+                <span class="tool-icon icon-wood"></span>
+                <span>Gỗ</span>
+            </button>
+            <button class="tool-btn" data-material="0">
+                <span class="tool-icon icon-eraser"></span>
+                <span>Xóa</span>
+            </button>
+        </footer>
+
+        <!-- Universal Error Screen Boundary -->
+        <div id="error-boundary" class="hidden">
+            <div class="error-card">
+                <h1>KAISOUL ECO BOX</h1>
+                <h2>Simulation Error</h2>
+                <p>Mô phỏng gặp sự cố ngoài dự kiến.</p>
+                <div id="error-details"></div>
+                <button class="btn-restart" onclick="window.location.reload()">RESTART SIMULATION</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Core Engine Scripts -->
+    <script src="js/materials.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/world.js"></script>
+    <script src="js/renderer.js"></script>
+    <script src="js/input.js"></script>
+    <script src="js/ui.js"></script>
+    
+    <!-- Future Extension Placeholders -->
+    <script src="js/water.js"></script>
+    <script src="js/plants.js"></script>
+    <script src="js/animalAI.js"></script>
+    <script src="js/animals.js"></script>
+    <script src="js/reproduction.js"></script>
+    <script src="js/foodChain.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/climate.js"></script>
+    <script src="js/bacteria.js"></script>
+    <script src="js/ecosystem.js"></script>
+    <script src="js/achievements.js"></script>
+    <script src="js/saveSystem.js"></script>
+
+    <!-- Main Logic Systems -->
+    <script src="js/simulation.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
